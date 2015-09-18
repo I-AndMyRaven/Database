@@ -1,9 +1,8 @@
-$.ajax({
-  type: 'POST',
-  url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-  data: {
-    
-  }
-}).done(function(response) {
-  console.log(response);
-});
+function Init(){
+  //Includes
+  var cps = require('cps-api');
+  //Creating a CPS connection
+  var cpsConn = new cps.Connection(  'tcp://cloud-eu-0.clusterpoint.com:9007', 'DB_NAME', 'USERNAME', 'PASSWORD', 'document', 'document/id', {account: YOUR_ACCOUNT_ID});
+  // Debug
+  //cpsConn.debug = true;
+}
